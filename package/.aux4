@@ -1,12 +1,13 @@
 {
   "scope": "agent",
   "name": "skill-knowledge",
-  "version": "9.9.9-agc013",
+  "version": "0.1.0",
   "license": "Apache-2.0",
   "description": "Native agent skill: methodology for running a markdown knowledge base in aux4/kb (organize, standardize, link, search)",
   "tags": [
     "ai",
     "skill",
+    "ai-skill",
     "knowledge",
     "agent",
     "kb"
