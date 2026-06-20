@@ -1,0 +1,49 @@
+{
+  "scope": "agent",
+  "name": "skill-knowledge",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Native agent skill: methodology for running a markdown knowledge base in aux4/kb (organize, standardize, link, search)",
+  "tags": [
+    "ai",
+    "skill",
+    "ai-skill",
+    "knowledge",
+    "agent",
+    "kb"
+  ],
+  "dependencies": [
+    "aux4/ai-skill",
+    "aux4/kb"
+  ],
+  "profiles": [
+    {
+      "name": "ai:skill",
+      "commands": [
+        {
+          "name": "knowledge",
+          "execute": [
+            "profile:ai:skill:knowledge"
+          ],
+          "help": {
+            "text": "Methodology for running a kb knowledge base: how to organize, standardize, link, and search entries. Load when curating/searching kb."
+          }
+        }
+      ]
+    },
+    {
+      "name": "ai:skill:knowledge",
+      "commands": [
+        {
+          "name": "prompt",
+          "execute": [
+            "cat ${packageDir}/instructions/prompt.md"
+          ],
+          "help": {
+            "text": "Print the knowledge-base methodology (organize, standardize, link, search) the agent applies with its own aux4 kb calls"
+          }
+        }
+      ]
+    }
+  ]
+}
