@@ -36,7 +36,7 @@
         {
           "name": "prompt",
           "execute": [
-            "cat ${packageDir}/instructions/knowledge.md"
+            "cat ${packageDir}/instructions/prompt.md"
           ],
           "help": {
             "text": "Print the knowledge-base methodology (organize, standardize, link, search) the agent applies with its own aux4 kb calls"
