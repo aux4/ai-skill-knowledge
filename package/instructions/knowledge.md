@@ -4,6 +4,20 @@ A knowledge base in `aux4/kb` is your durable, searchable memory of decisions, f
 
 The goal: every entry is findable later and trusted when found. A messy kb is worse than none — it costs reads and returns stale answers.
 
+## Commands: use these exact forms
+
+The title is a positional argument — not a flag. Use these forms verbatim (run `aux4 kb <cmd> --help` only if you need more):
+
+```
+aux4 kb search "<query>"                                  # find first — ALWAYS before adding
+aux4 kb list                                              # skim what exists
+aux4 kb view "<title>"                                    # read one entry in full
+aux4 kb add "<title>" --content "<markdown>" --tags a,b   # create (title is positional)
+aux4 kb update "<title>" --content "<markdown>"           # CHANGE an existing entry (never add a duplicate)
+```
+
+If `add` reports `Entry already exists`, you meant `update`. Verify each write succeeded (look for `Added:`/`Updated:`) before trusting it — a silent error means it was NOT saved.
+
 ## Organize: structure and granularity
 
 - **One topic per entry.** An entry answers one question or describes one thing. If you can't write a single sharp title for it, it's two entries.
